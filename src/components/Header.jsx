@@ -152,7 +152,6 @@ const HeaderMed = () => {
 export default function Header() {
   const isLarge = useMediaQuery({ query: "(min-width: 768px)" });
 
-  console.log(isLarge);
   return (
     <Popover className="relative bg-white">
       {/* This only gets rendered when the breakpoint allows */}
