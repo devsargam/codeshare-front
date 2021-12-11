@@ -1,40 +1,51 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { Fragment, useEffect, useState } from "react";
+import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
-import { MenuIcon, XIcon, CodeIcon, StarIcon } from "@heroicons/react/outline";
-import MediaQuery, { useMediaQuery } from "react-responsive";
+import {
+  MenuIcon,
+  XIcon,
+  CodeIcon,
+  StarIcon,
+  UploadIcon,
+} from "@heroicons/react/outline";
+import { useMediaQuery } from "react-responsive";
+import { Link } from "react-router-dom";
 
 const solutions = [
   {
     name: "Codes",
     description:
       "Get a better understanding of where your traffic is coming from.",
-    href: "#",
+    href: "/codes",
     icon: CodeIcon,
   },
   {
     name: "Favorites",
     description: "Speak directly to your customers in a more meaningful way.",
-    href: "#",
+    href: "/favorites",
     icon: StarIcon,
+  },
+  {
+    name: "Upload",
+    description: "",
+    href: "/upload",
+    icon: UploadIcon,
   },
 ];
 
 const HeaderLarge = () => {
-  const [isLogged, setIsLogged] = useState(false);
-
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 bg-gray-900">
       <div className="flex justify-between items-center border-b-2 border-gray-300 py-6 md:justify-start md:space-x-10">
         <div className="flex justify-start lg:w-0 lg:flex-1">
-          <a href="/">
+          <Link to={"/"}>
             <span className="sr-only">Workflow</span>
             <img
               className="h-8 w-auto sm:h-10"
               src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
               alt="Logo"
             />
-          </a>
+          </Link>
         </div>
         <div className="-mr-2 -my-2 md:hidden">
           <Popover.Button className="bg-indigo-800 rounded-md p-2 inline-flex items-center justify-center text-white hover:bg-indigo-600 hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -43,32 +54,38 @@ const HeaderLarge = () => {
           </Popover.Button>
         </div>
         <Popover.Group as="nav" className="hidden md:flex space-x-10">
-          <a
-            href="#"
+          <Link
+            to={"/codes"}
             className="text-base font-medium text-gray-300 hover:text-white"
           >
             Codes
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to={"/upload"}
+            className="text-base font-medium text-gray-300 hover:text-white"
+          >
+            Upload
+          </Link>
+          <Link
+            to={"/favorites"}
             className="text-base font-medium text-gray-300 hover:text-white"
           >
             Favorites
-          </a>
+          </Link>
         </Popover.Group>
         <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-          <a
-            href="#"
+          <Link
+            to={"signin"}
             className="whitespace-nowrap text-base font-medium text-gray-300 hover:text-gray-100"
           >
             Sign in
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to={"signup"}
             className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-700 hover:bg-indigo-600"
           >
             Sign up
-          </a>
+          </Link>
         </div>
       </div>
     </div>
@@ -110,9 +127,9 @@ const HeaderMed = () => {
             <div className="mt-6"></div>
             <nav className="grid gap-y-8">
               {solutions.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
+                  to={item.href}
                   className="-m-3 p-3 flex items-center rounded-md  hover:bg-gray-700"
                 >
                   <item.icon
@@ -122,7 +139,7 @@ const HeaderMed = () => {
                   <span className="ml-3 text-base font-medium text-gray-300">
                     {item.name}
                   </span>
-                </a>
+                </Link>
               ))}
             </nav>
           </div>

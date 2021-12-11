@@ -1,7 +1,7 @@
-import { list } from "postcss";
 import React from "react";
 
 export default function Home() {
+  // return <>Hello there</>;
   return (
     <section>
       <div className="relative max-w-5xl mx-auto pt-15 text-gray-100 sm:pt-24 lg:pt-32">
