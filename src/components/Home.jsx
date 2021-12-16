@@ -4,11 +4,11 @@ export default function Home() {
   // return <>Hello there</>;
   return (
     <section>
-      <div className="max-w-5xl mx-auto pt-15 text-gray-100 sm:pt-24 lg:pt-32">
-        <h1 className="text-white font-extrabold text-4xl text-center">
+      <div className="max-w-5xl mx-auto pt-10 text-gray-100 sm:pt-24 lg:pt-32">
+        <h1 className="text-white font-extrabold text-4xl sm:pt-10 text-center">
           “share your code, help your friends”
         </h1>
-        <p className="text-center max-w-5xl mt-5 mx-10">
+        <p className="text-center max-w-5xl mt-5 mx-10 text-1xl sm:text-lg lg:text-2xl">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti
           porro soluta beatae consequuntur non, accusantium nobis numquam fugit
           culpa. Excepturi quasi rerum perspiciatis hic ratione quam
@@ -18,7 +18,7 @@ export default function Home() {
         <h1 className="text-gray-100 text-center font-extrabold text-4xl p-5">
           What is this website for?
         </h1>
-        <p className="text-white text-center mx-10 max-w-5xl">
+        <p className="text-center max-w-5xl mx-10 text-1xl sm:text-lg lg:text-2xl">
           Sharing code has always been a pain in ass for a long time. It is also
           difficult to teach non-techy guys about version control and github so
           due to that fact I created this simple site where anyone can post,
