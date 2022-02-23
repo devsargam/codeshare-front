@@ -1,3 +1,5 @@
+# WIP
+
 # Codeshare
 
 ## The last code sharing website
@@ -20,15 +22,17 @@ watch the results in the right.
 
 Codeshare uses a number of open source projects to work properly:
 
-- [ReactJS](https://fastapi.tiangolo.com/) - Javascript libary for desiging user interfaces
+- [ReactJS](https://reactjs.org/) - Javascript libary for desiging user interfaces
 - [Postgres](https://www.postgresql.org/) - Relational Database
 - [FastAPI](https://fastapi.tiangolo.com/) - Asynchronous backend framework for python
 
 - [prisma](https://prismjs.com/) - Syntax highlighting for codes
-- [sqlalchemy]() - ORM for database manipulation and creation
+- [SQLModel](https://sqlmodel.tiangolo.com/) - ORM for database manipulation and creation
 
 ## Installation
+WELP
 
 ## Development
+WELP
 
 Want to contribute? Great!
